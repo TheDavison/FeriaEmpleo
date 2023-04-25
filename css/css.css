@@ -1,0 +1,152 @@
+html{
+    scrollbar-width: none;
+}
+
+ul{
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background-image: url("../imgs/bodyBg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Bruno Ace SC', cursive;
+    scrollbar-width: none;
+    font-size: 30px;
+}
+/*------------------------------------------------------------*/
+
+.presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+}
+
+.presentation__container{
+    text-align: center;
+    border: 3px solid lightgray;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.presentation__container:hover{
+    cursor: pointer;
+}
+
+.presentation__texto{
+    animation: aparecer 3s;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0%;;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+/*------------------------------------------------------------*/
+
+main{
+    margin: 10vh 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.skill{
+    background-color: rgba(255, 255, 255, 0.421);
+    padding: 7rem;
+    text-align: center;    
+    border-radius: 20px;
+}
+
+.skill__name{
+    font-size: 30px;
+}
+
+.lenguajes{
+    margin: 10vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lenguajes__container{
+    background-color: rgba(255, 255, 255, 0.421);
+    margin: 3rem;
+    width: 30rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.lenguajes__front, .lenguajes__back, .skill__list{
+    list-style: none;
+}
+/*------------------------------------------------------------*/
+
+.contact{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.contact__email, .contact__linkedin{
+    display: flex;
+    margin-top: -4px;
+}
+
+.contact__emailIcon{
+    width: 60px;
+    top: 30px;
+    margin-top: -4px;
+}
+
+.contact__linkedinIcon{
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: 3px;
+}
+
+@media screen and (max-width: 1250px) {
+    .skill{
+        padding: 4rem;
+    }
+
+    .lenguajes__container{
+        width: 22rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .lenguajes{
+        flex-wrap: wrap;
+    }
+}
